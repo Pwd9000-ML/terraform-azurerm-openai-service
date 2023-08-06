@@ -4,24 +4,24 @@ This example module creates a new resource group and Key Vault. It then creates 
 
 ## Workflow
 
-![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Example3.png)
+**Step1:** Create a new resource group and KeyVault to store secrets.  
+**Step2:** Create model deployments on and existing OpenAI service in a different resource group.  
+**Step3:** Save the OpenAI Account and model details into the Key Vault.  
 
-**Step1:** Create a new resource group and KeyVault to store secrets.
-**Step2:** Create model deployments on and existing OpenAI service in a different resource group.
-**Step3:** Save the OpenAI Account and model details into the Key Vault.
+![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Example3.png)
 
 ## Resources Created
 
-![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Resources3.png)
-
 - **Key Vault** - Used to store OpenAI Service Account and model deployment secrets.
+
+![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Resources3.png)
 
 ## Models Deployed (On an existing OpenAI Service)
 
-![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Deployments3.png)
-
 - **GPT-35-Turbo** - The GPT-3.5 Turbo model deployment.
 - **GPT-35-Turbo-16K** - The GPT-3.5 Turbo 16K model deployment.
+
+![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Deployments3.png)
 
 ## Secrets Saved
 
