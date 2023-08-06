@@ -1,5 +1,5 @@
 ### Common Variables ###
-resource_group_name = "TF-Module-Automated-Tests-OpenAI-Service"
+resource_group_name = "Terraform-Cognitive-Services-Example1"
 location            = "uksouth"
 tags = {
   Terraform   = "True"
@@ -10,7 +10,7 @@ tags = {
 
 # solution specific variables
 kv_config = {
-  name = "kvname"
+  name = "openaikv1001"
   sku  = "standard"
 }
 keyvault_firewall_default_action             = "Deny"
@@ -20,8 +20,8 @@ keyvault_firewall_virtual_network_subnet_ids = []
 
 ### Create OpenAI Service ###
 create_openai_service                     = true
-openai_account_name                       = "name"
-openai_custom_subdomain_name              = "name" #translates to 'name.openai.azure.com'
+openai_account_name                       = "pwd1001"
+openai_custom_subdomain_name              = "pwd1001" #translates to 'pwd1001.openai.azure.com'
 openai_sku_name                           = "S0"
 openai_local_auth_enabled                 = true
 openai_outbound_network_access_restricted = false
@@ -35,7 +35,7 @@ create_model_deployment = true
 model_deployment = [
   {
     deployment_no = 1
-    deployment_id = "name-gpt-35-turbo-16k"
+    deployment_id = "pwd1001-gpt-35-turbo-16k"
     api_type      = "azure"
     model         = "gpt-35-turbo-16k"
     model_format  = "OpenAI"
@@ -44,7 +44,7 @@ model_deployment = [
   },
   {
     deployment_no = 2
-    deployment_id = "name-gpt-35-turbo"
+    deployment_id = "pwd1001-gpt-35-turbo"
     api_type      = "azure"
     model         = "gpt-35-turbo"
     model_format  = "OpenAI"

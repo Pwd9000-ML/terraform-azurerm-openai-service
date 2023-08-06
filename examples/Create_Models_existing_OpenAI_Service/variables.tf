@@ -24,7 +24,7 @@ variable "kv_config" {
     sku  = string
   })
   default = {
-    name = "kvname"
+    name = "openaikv9000"
     sku  = "standard"
   }
   description = "Key Vault configuration object to create azure key vault to store openai account details."

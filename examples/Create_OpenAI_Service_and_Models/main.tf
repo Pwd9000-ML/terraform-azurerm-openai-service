@@ -1,6 +1,6 @@
 terraform {
-  backend "azurerm" {}
-  #backend "local" { path = "terraform-test1.tfstate" }
+  #backend "azurerm" {}
+  backend "local" { path = "terraform-example1.tfstate" }
 }
 
 provider "azurerm" {
@@ -14,12 +14,6 @@ provider "azurerm" {
 #################################################
 # PRE-REQS                                      #
 #################################################
-### Random integer to generate unique names
-resource "random_integer" "number" {
-  min = 0001
-  max = 9999
-}
-
 ### Resource group to deploy the Key Vault into
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
@@ -31,7 +25,8 @@ resource "azurerm_resource_group" "rg" {
 # MODULE TO TEST                                 #
 ##################################################
 module "openai" {
-  source = "../.."
+  source                   = "Pwd9000-ML/openai-service/azurerm"
+  version                  = ">= 0.1.0"
 
   #common
   location = var.location
@@ -39,7 +34,7 @@ module "openai" {
 
   #keyvault (To store OpenAI Account and model details, if the KV needs to be created in a different resource group, create it first and pass the resource group name to the module)
   keyvault_resource_group_name                 = azurerm_resource_group.rg.name
-  kv_config                                    = local.kv_config
+  kv_config                                    = var.kv_config
   keyvault_firewall_default_action             = var.keyvault_firewall_default_action
   keyvault_firewall_bypass                     = var.keyvault_firewall_bypass
   keyvault_firewall_allowed_ips                = var.keyvault_firewall_allowed_ips
@@ -48,8 +43,8 @@ module "openai" {
   #Create OpenAI Service?
   create_openai_service                     = var.create_openai_service
   openai_resource_group_name                = azurerm_resource_group.rg.name
-  openai_account_name                       = "${var.openai_account_name}${random_integer.number.result}"
-  openai_custom_subdomain_name              = "${var.openai_custom_subdomain_name}${random_integer.number.result}"
+  openai_account_name                       = var.openai_account_name
+  openai_custom_subdomain_name              = var.openai_custom_subdomain_name
   openai_sku_name                           = var.openai_sku_name
   openai_local_auth_enabled                 = var.openai_local_auth_enabled
   openai_outbound_network_access_restricted = var.openai_outbound_network_access_restricted
