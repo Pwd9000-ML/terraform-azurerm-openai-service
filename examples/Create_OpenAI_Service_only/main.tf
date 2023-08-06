@@ -1,6 +1,6 @@
 terraform {
   #backend "azurerm" {}
-  backend "local" { path = "terraform-test1.tfstate" }
+  backend "local" { path = "terraform-example1.tfstate" }
 }
 
 provider "azurerm" {
@@ -25,8 +25,8 @@ resource "azurerm_resource_group" "rg" {
 # MODULE TO TEST                                 #
 ##################################################
 module "openai" {
-  source                   = "Pwd9000-ML/openai-service/azurerm"
-  version                  = ">= 0.1.0"
+  source  = "Pwd9000-ML/openai-service/azurerm"
+  version = ">= 0.1.0"
 
   #common
   location = var.location
@@ -53,5 +53,4 @@ module "openai" {
 
   #Create Model Deployment?
   create_model_deployment = var.create_model_deployment
-  model_deployment        = var.model_deployment
 }

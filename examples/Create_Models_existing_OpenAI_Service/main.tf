@@ -1,6 +1,6 @@
 terraform {
   #backend "azurerm" {}
-  backend "local" { path = "terraform-test1.tfstate" }
+  backend "local" { path = "terraform-example1.tfstate" }
 }
 
 provider "azurerm" {
@@ -25,8 +25,8 @@ resource "azurerm_resource_group" "rg" {
 # MODULE TO TEST                                 #
 ##################################################
 module "openai" {
-  source                   = "Pwd9000-ML/openai-service/azurerm"
-  version                  = ">= 0.1.0"
+  source  = "Pwd9000-ML/openai-service/azurerm"
+  version = ">= 0.1.0"
 
   #common
   location = var.location
@@ -44,14 +44,13 @@ module "openai" {
   create_openai_service                     = var.create_openai_service
   openai_resource_group_name                = azurerm_resource_group.rg.name
   openai_account_name                       = var.openai_account_name
-  openai_custom_subdomain_name              = var.openai_custom_subdomain_name
-  openai_sku_name                           = var.openai_sku_name
-  openai_local_auth_enabled                 = var.openai_local_auth_enabled
-  openai_outbound_network_access_restricted = var.openai_outbound_network_access_restricted
-  openai_public_network_access_enabled      = var.openai_public_network_access_enabled
-  openai_identity                           = var.openai_identity
+  #openai_custom_subdomain_name              = var.openai_custom_subdomain_name
+  #openai_sku_name                           = var.openai_sku_name
+  #openai_local_auth_enabled                 = var.openai_local_auth_enabled
+  #openai_outbound_network_access_restricted = var.openai_outbound_network_access_restricted
+  #openai_public_network_access_enabled      = var.openai_public_network_access_enabled
+  #openai_identity                           = var.openai_identity
 
   #Create Model Deployment?
   create_model_deployment = var.create_model_deployment
-  model_deployment        = var.model_deployment
 }
