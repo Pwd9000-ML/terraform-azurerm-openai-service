@@ -26,7 +26,7 @@ resource "azurerm_resource_group" "rg" {
 ##################################################
 module "openai" {
   source  = "Pwd9000-ML/openai-service/azurerm"
-  version = ">= 0.1.0"
+  version = ">= 1.0.0"
 
   #common
   location = var.location
