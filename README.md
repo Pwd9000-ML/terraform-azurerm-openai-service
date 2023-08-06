@@ -17,7 +17,7 @@ For an example of how to create **Models** hosted on an existing **OpenAI Servic
 See **[Create OpenAI Service Only](https://github.com/Pwd9000-ML/terraform-azurerm-openai-service/tree/master/examples/Create_OpenAI_Service_only):**  
 For an example of how to create only an **OpenAI Service** hosted on Azure and saving the details to an Azure **Key Vault**. (No models deployed)  
 
-This module is published on the **[Public Terraform Registry - sonarqube-aci-internal](https://registry.terraform.io/modules/Pwd9000-ML/sonarqube-aci-internal/azurerm/latest)**  
+This module is published on the **[Public Terraform Registry - openai-service](https://registry.terraform.io/modules/Pwd9000-ML/openai-service/azurerm/latest)**  
 
 Enjoy!
 
