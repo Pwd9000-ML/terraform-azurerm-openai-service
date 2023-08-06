@@ -8,7 +8,7 @@ This example module creates a new resource group and Key Vault. It then creates 
 **Step2:** Create model deployments on and existing OpenAI service in a different resource group.  
 **Step3:** Save the OpenAI Account and model details into the Key Vault.  
 
-![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Example3.png)
+![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Example33.png)
 
 ## Resources Created
 
