@@ -8,6 +8,8 @@
 
 Flexible Terraform Registry module for setting up an Azure hosted **OpenAI service**, **deploy models** on a **new** or **existing** OpenAI service, saving deployment and account details to **Azure Key Vault** ready for consumption by other services hosted in **Azure**.
 
+**NOTE:** Your Azure subscription will need to be whitelisted for **Azure Open AI**. At the release time of this module (August 2023) you will need to request access via this **[form](https://aka.ms/oai/access)** and a further form for **[GPT 4](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xURjE4QlhVUERGQ1NXOTlNT0w1NldTWjJCMSQlQCN0PWcu)**. Once you have access deploy either **GPT-35-Turbo**, **GPT-35-Turbo-16k** or if you have access to **GPT-4-32k**, go forward with that model.
+
 See **[Create OpenAI Service and Models](https://github.com/Pwd9000-ML/terraform-azurerm-openai-service/tree/master/examples/Create_OpenAI_Service_and_Models):**  
 For an example of how to create an **OpenAI Service** hosted on Azure, deploy **Models** and saving the details to an Azure **Key Vault**.  
 
