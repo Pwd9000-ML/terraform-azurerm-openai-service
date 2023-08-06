@@ -16,7 +16,7 @@ variable "tags" {
     Terraform   = "True"
     Description = "OpenAI Cognitive service"
     Author      = "Marcel Lupo"
-    GitHub      = "https://github.com/Pwd9000-ML/terraform-azurerm-openai-private-chatgpt"
+    GitHub      = "https://github.com/Pwd9000-ML/terraform-azurerm-openai-service"
   }
   description = "A map of key value pairs that is used to tag resources created."
 }

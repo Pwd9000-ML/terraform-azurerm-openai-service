@@ -12,9 +12,9 @@ variable "tags" {
 }
 
 ### solution resource group ###
-variable "openai_resource_group_name" {
+variable "resource_group_name" {
   type        = string
-  description = "Name of the resource group to create where the cognitive account OpenAI service is hosted."
+  description = "Name of the resource group to create where resources will be hosted."
   nullable    = false
 }
 ### key vault ###

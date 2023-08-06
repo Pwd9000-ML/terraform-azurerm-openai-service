@@ -14,14 +14,8 @@ provider "azurerm" {
 #################################################
 # PRE-REQS                                      #
 #################################################
-### Random integer to generate unique names
-resource "random_integer" "number" {
-  min = 0001
-  max = 9999
-}
-
-### Resource group to deploy the container apps private ChatGPT instance and supporting resources into
-resource "azurerm_resource_group" "openai_rg" {
+### Resource group to deploy the Key Vault into
+resource "azurerm_resource_group" "rg" {
   name     = var.openai_resource_group_name
   location = var.location
   tags     = var.tags
@@ -30,15 +24,15 @@ resource "azurerm_resource_group" "openai_rg" {
 ##################################################
 # MODULE TO TEST                                 #
 ##################################################
-module "private-chatgpt-openai" {
+module "openai" {
   source = "../.."
 
   #common
-  location            = var.location
-  tags                = var.tags
-  resource_group_name = azurerm_resource_group.openai_rg.name
+  location = var.location
+  tags     = var.tags
 
-  #keyvault
+  #keyvault (To store OpenAI Account and model details, if the KV needs to be created in a different resource group, create it first and pass the resource group name to the module)
+  keyvault_resource_group_name                 = azurerm_resource_group.rg.name
   kv_config                                    = var.kv_config
   keyvault_firewall_default_action             = var.keyvault_firewall_default_action
   keyvault_firewall_bypass                     = var.keyvault_firewall_bypass
@@ -47,7 +41,7 @@ module "private-chatgpt-openai" {
 
   #Create OpenAI Service?
   create_openai_service                     = var.create_openai_service
-  openai_resource_group_name                = azurerm_resource_group.openai_rg.name
+  openai_resource_group_name                = azurerm_resource_group.rg.name
   openai_account_name                       = var.openai_account_name
   openai_custom_subdomain_name              = var.openai_custom_subdomain_name
   openai_sku_name                           = var.openai_sku_name
@@ -59,5 +53,4 @@ module "private-chatgpt-openai" {
   #Create Model Deployment?
   create_model_deployment = var.create_model_deployment
   model_deployment        = var.model_deployment
-
 }

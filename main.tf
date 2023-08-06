@@ -61,7 +61,7 @@ module "create_openai_service" {
   tags                               = var.tags
 }
 
-### Model Deployment
+### Model Deployments
 module "create_model_deployment" {
   source = "./modules/model_deployment"
   # Only deploy new model if 'var.create_model_deployment' is true (else use existing cognitive account)
@@ -72,7 +72,7 @@ module "create_model_deployment" {
   depends_on                 = [module.create_openai_service]
 }
 
-### Save OpenAI Cognitive Account details to Key Vault (will be pulled into container apps as secrets/enviroment variables)
+### Save OpenAI Cognitive Account details to Key Vault for consumption by other services
 resource "azurerm_key_vault_secret" "openai_endpoint" {
   name         = "${var.openai_account_name}-openai-endpoint"
   value        = var.create_openai_service == true ? module.create_openai_service[0].openai_endpoint : data.azurerm_cognitive_account.openai[0].endpoint

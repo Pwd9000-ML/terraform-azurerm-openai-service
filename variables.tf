@@ -6,9 +6,9 @@ variable "tags" {
   type = map(string)
   default = {
     Terraform   = "True"
-    Description = "Private ChatGPT hosted on Azure OpenAI service."
+    Description = "Azure OpenAI service."
     Author      = "Marcel Lupo"
-    GitHub      = "https://github.com/Pwd9000-ML/terraform-azurerm-openai-private-chatgpt"
+    GitHub      = "https://github.com/Pwd9000-ML/terraform-azurerm-openai-service"
   }
   description = "A map of key value pairs that is used to tag resources created."
 }
@@ -20,9 +20,9 @@ variable "location" {
 }
 
 # solution resource group
-variable "resource_group_name" {
+variable "keyvault_resource_group_name" {
   type        = string
-  description = "Name of the resource group where the Private ChatGPT solution resources will be hosted."
+  description = "Name of the resource group where the Key Vault will be hosted."
   nullable    = false
 }
 

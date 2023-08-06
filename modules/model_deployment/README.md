@@ -1,6 +1,6 @@
-# Create Model Deployment
+# Create Model Deployments
 
-This sub module will create a model deployment on an cognitive OpenAI service/account.
+Sub module to create model deployments on an existing cognitive OpenAI service/account.
 
 <!-- BEGIN_TF_DOCS -->
 

@@ -1,11 +1,11 @@
 ### Common Variables ###
-openai_resource_group_name = "Terraform-Cognitive-Services"
-location                   = "eastus"
+resource_group_name = "Terraform-Cognitive-Services-Test"
+location            = "eastus"
 tags = {
   Terraform   = "True"
-  Description = "Private ChatGPT - Azure OpenAI"
+  Description = "Azure OpenAI Service"
   Author      = "Marcel Lupo"
-  GitHub      = "https://github.com/Pwd9000-ML/terraform-azurerm-openai-private-chatgpt"
+  GitHub      = "https://github.com/Pwd9000-ML/terraform-azurerm-openai-service"
 }
 
 # solution specific variables
@@ -21,7 +21,7 @@ keyvault_firewall_virtual_network_subnet_ids = []
 ### Create OpenAI Service ###
 create_openai_service                     = true
 openai_account_name                       = "pwd9000"
-openai_custom_subdomain_name              = "pwd9000" #translates to
+openai_custom_subdomain_name              = "pwd9000" #translates to 'pwd9000.openai.azure.com'
 openai_sku_name                           = "S0"
 openai_local_auth_enabled                 = true
 openai_outbound_network_access_restricted = false
@@ -42,7 +42,7 @@ model_deployment = [
     model_version = "0613"
     scale_type    = "Standard"
   },
-    {
+  {
     deployment_no = 2
     deployment_id = "pwd9000-gpt-35-turbo"
     api_type      = "azure"
