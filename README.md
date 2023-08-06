@@ -6,7 +6,7 @@
 
 ## Description
 
-Flexible Terraform Registry module for setting up an Azure hosted **OpenAI service**, **deploy models** on a new or existing OpenAI service, saving deployment and account details to **Azure Key Vault**.
+Flexible Terraform Registry module for setting up an Azure hosted **OpenAI service**, **deploy models** on a **new** or **existing** OpenAI service, saving deployment and account details to **Azure Key Vault** ready for consumption by other services hosted in **Azure**.
 
 See **[Create OpenAI Service and Models](https://github.com/Pwd9000-ML/terraform-azurerm-openai-service/tree/master/examples/Create_OpenAI_Service_and_Models):**  
 For an example of how to create an **OpenAI Service** hosted on Azure, deploy **Models** and saving the details to an Azure **Key Vault**.  
