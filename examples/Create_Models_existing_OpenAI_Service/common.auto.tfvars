@@ -20,15 +20,28 @@ keyvault_firewall_virtual_network_subnet_ids = []
 
 ### Create OpenAI Service ###
 create_openai_service                     = false
-openai_account_name                       = "pwd1002"
-openai_custom_subdomain_name              = "pwd1002" #translates to 'pwd1002.openai.azure.com'
-openai_sku_name                           = "S0"
-openai_local_auth_enabled                 = true
-openai_outbound_network_access_restricted = false
-openai_public_network_access_enabled      = true
-openai_identity = {
-  type = "SystemAssigned"
-}
+openai_account_name                       = "pwd1003"
+openai_resource_group_name                = "Terraform-Exisiting-Cognitive-Services-rg"
 
 ### Create Model deployment ###
 create_model_deployment = true
+model_deployment = [
+  {
+    deployment_no = 1
+    deployment_id = "pwd1003-gpt-35-turbo-16k"
+    api_type      = "azure"
+    model         = "gpt-35-turbo-16k"
+    model_format  = "OpenAI"
+    model_version = "0613"
+    scale_type    = "Standard"
+  },
+  {
+    deployment_no = 2
+    deployment_id = "pwd1003-gpt-35-turbo"
+    api_type      = "azure"
+    model         = "gpt-35-turbo"
+    model_format  = "OpenAI"
+    model_version = "0613"
+    scale_type    = "Standard"
+  }
+]

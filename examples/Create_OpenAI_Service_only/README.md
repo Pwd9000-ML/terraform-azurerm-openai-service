@@ -1,6 +1,6 @@
-# Example: Create OpenAI Service and Models
+# Example: Create OpenAI Service Only
 
-This example module creates a new resource group, new cognitive OpenAI service, and two model deployments. It will then run a test to ensure the model deployment is working as expected and save the OpenAI Account and Model deployment details into an Azure Key Vault ready for consumption by other services.
+This example module creates a new resource group, Key Vault and a new cognitive OpenAI service only. The OpenAI Account details are saved into an Azure Key Vault ready for consumption by other services. No Model Deployments are created.  
 
 ## Workflow
 
@@ -8,14 +8,14 @@ This example module creates a new resource group, new cognitive OpenAI service, 
 
 **Step1:** Create a new resource group and KeyVault to store secrets.
 **Step2:** Create a new cognitive OpenAI service in the same resource group as the KeyVault. A different resource group can be used if needed.
-**Step3:** Save the OpenAI Account details into the KeyVault.
+**Step3:** Save the OpenAI Account details into the Key Vault.
 
 ## Resources Created
 
 ![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Resources2.png)
 
 - **Key Vault** - Used to store OpenAI Service Account secrets.
-- **Cognitive** OpenAI Service - The OpenAI service/account.
+- **Cognitive OpenAI Service** - The OpenAI service/account.
 
 ## Models Deployed
 
