@@ -1,5 +1,5 @@
 locals {
-  ## locals config for keyvault firewall rules ##
+  ## locals config for key vault firewall rules ##
   kv_net_rules = [
     {
       default_action             = var.keyvault_firewall_default_action

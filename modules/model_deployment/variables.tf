@@ -28,7 +28,7 @@ variable "model_deployment" {
   default     = []
   description = <<-DESCRIPTION
       type = list(object({
-        deployment_no   = (Required) The unique number of each model deployment (Numbered when saved in Azure KeyVault).
+        deployment_no   = (Required) The unique number of each model deployment (Numbered when saved in Azure Key Vault).
         deployment_id   = (Required) The name of the Cognitive Services Account `Model Deployment`. Changing this forces a new resource to be created.
         api_type        = (Required) The type of the Cognitive Services Account `Model Deployment`. Possible values are `azure`.
         model = {

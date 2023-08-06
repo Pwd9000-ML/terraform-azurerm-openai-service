@@ -4,8 +4,8 @@ This example module creates a new resource group, new cognitive OpenAI service, 
 
 ## Workflow
 
-**Step1:** Create a new resource group and KeyVault to store secrets.  
-**Step2:** Create a new cognitive OpenAI service in the same resource group as the KeyVault. A different resource group can be used if needed.  
+**Step1:** Create a new resource group and Azure Key Vault to store secrets.  
+**Step2:** Create a new cognitive OpenAI service in the same resource group as the Key Vault. A different resource group can be used if needed.  
 **Step3:** Create model deployments on the newly created OpenAI service.  
 **Step4:** Save the OpenAI Account and Model deployments details into the Key Vault.  
 

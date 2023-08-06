@@ -34,25 +34,25 @@ variable "kv_config" {
 variable "keyvault_firewall_default_action" {
   type        = string
   default     = "Deny"
-  description = "Default action for keyvault firewall rules."
+  description = "Default action for key vault firewall rules."
 }
 
 variable "keyvault_firewall_bypass" {
   type        = string
   default     = "AzureServices"
-  description = "List of keyvault firewall rules to bypass."
+  description = "List of key vault firewall rules to bypass."
 }
 
 variable "keyvault_firewall_allowed_ips" {
   type        = list(string)
   default     = []
-  description = "value of keyvault firewall allowed ip rules."
+  description = "value of key vault firewall allowed ip rules."
 }
 
 variable "keyvault_firewall_virtual_network_subnet_ids" {
   type        = list(string)
   default     = []
-  description = "value of keyvault firewall allowed virtual network subnet ids."
+  description = "value of key vault firewall allowed virtual network subnet ids."
 }
 
 ### openai service ###

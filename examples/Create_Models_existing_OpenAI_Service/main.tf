@@ -32,7 +32,7 @@ module "openai" {
   location = var.location
   tags     = var.tags
 
-  #keyvault (To store OpenAI Account and model details, if the KV needs to be created in a different resource group, create it first and pass the resource group name to the module)
+  #key vault (To store OpenAI Account and model details, if the KV needs to be created in a different resource group, create it first and pass the resource group name to the module)
   keyvault_resource_group_name                 = azurerm_resource_group.rg.name
   kv_config                                    = var.kv_config
   keyvault_firewall_default_action             = var.keyvault_firewall_default_action
@@ -41,9 +41,9 @@ module "openai" {
   keyvault_firewall_virtual_network_subnet_ids = var.keyvault_firewall_virtual_network_subnet_ids
 
   #Create OpenAI Service?
-  create_openai_service                     = var.create_openai_service
-  openai_resource_group_name                = var.openai_resource_group_name #Exisitng resource group name
-  openai_account_name                       = var.openai_account_name #Exisitng openai account name
+  create_openai_service      = var.create_openai_service
+  openai_resource_group_name = var.openai_resource_group_name #Exisitng resource group name
+  openai_account_name        = var.openai_account_name        #Exisitng openai account name
 
   #Create Model Deployment?
   create_model_deployment = var.create_model_deployment

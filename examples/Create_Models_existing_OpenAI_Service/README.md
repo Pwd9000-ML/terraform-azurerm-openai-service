@@ -4,7 +4,7 @@ This example module creates a new resource group and Key Vault. It then creates 
 
 ## Workflow
 
-**Step1:** Create a new resource group and KeyVault to store secrets.  
+**Step1:** Create a new resource group and Azure Key Vault to store secrets.  
 **Step2:** Create model deployments on and existing OpenAI service in a different resource group.  
 **Step3:** Save the OpenAI Account and model details into the Key Vault.  
 

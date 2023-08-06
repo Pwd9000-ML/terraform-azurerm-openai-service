@@ -4,8 +4,8 @@ This example module creates a new resource group, Key Vault and a new cognitive 
 
 ## Workflow
 
-**Step1:** Create a new resource group and KeyVault to store secrets.  
-**Step2:** Create a new cognitive OpenAI service in the same resource group as the KeyVault. A different resource group can be used if needed.  
+**Step1:** Create a new resource group and Azure Key Vault to store secrets.  
+**Step2:** Create a new cognitive OpenAI service in the same resource group as the Key Vault. A different resource group can be used if needed.  
 **Step3:** Save the OpenAI Account details into the Key Vault.  
 
 ![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/Example2.png)

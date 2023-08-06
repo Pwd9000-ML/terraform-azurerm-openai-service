@@ -19,9 +19,9 @@ keyvault_firewall_allowed_ips                = ["0.0.0.0/0"] #for testing purpos
 keyvault_firewall_virtual_network_subnet_ids = []
 
 ### Create OpenAI Service ###
-create_openai_service                     = false
-openai_account_name                       = "pwd1003"
-openai_resource_group_name                = "Terraform-Exisiting-Cognitive-Services-rg"
+create_openai_service      = false
+openai_account_name        = "pwd1003"
+openai_resource_group_name = "Terraform-Exisiting-Cognitive-Services-rg"
 
 ### Create Model deployment ###
 create_model_deployment = true
