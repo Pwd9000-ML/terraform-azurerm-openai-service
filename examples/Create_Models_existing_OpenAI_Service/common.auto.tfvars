@@ -28,14 +28,14 @@ create_model_deployment = true
 model_deployment = [
   {
     deployment_id = "gpt35turbo16k"
-    model         = "gpt-35-turbo-16k"
+    model_name    = "gpt-35-turbo-16k"
     model_format  = "OpenAI"
     model_version = "0613"
     scale_type    = "Standard"
   },
   {
     deployment_id = "gpt35turbo"
-    model         = "gpt-35-turbo"
+    model_name    = "gpt-35-turbo"
     model_format  = "OpenAI"
     model_version = "0613"
     scale_type    = "Standard"
