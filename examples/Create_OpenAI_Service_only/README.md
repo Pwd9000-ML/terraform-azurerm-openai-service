@@ -40,7 +40,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_openai"></a> [openai](#module\_openai) | Pwd9000-ML/openai-service/azurerm | >= 1.0.0 |
+| <a name="module_openai"></a> [openai](#module\_openai) | Pwd9000-ML/openai-service/azurerm | >= 1.1.0 |
 
 ## Resources
 
