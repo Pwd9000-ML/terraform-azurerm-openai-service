@@ -7,7 +7,7 @@ resource "azurerm_cognitive_deployment" "model" {
 
   model {
     format  = each.value.model_format
-    name    = each.value.model
+    name    = each.value.model_name
     version = each.value.model_version
   }
   scale {

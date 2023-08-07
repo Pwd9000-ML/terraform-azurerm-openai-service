@@ -87,17 +87,9 @@ resource "azurerm_key_vault_secret" "openai_primary_key" {
   depends_on   = [azurerm_role_assignment.kv_role_assigment]
 }
 
-resource "azurerm_key_vault_secret" "openai_model_type" {
-  for_each     = { for each in var.model_deployment : each.deployment_id => each }
-  name         = "${var.openai_account_name}-model-${each.value.deployment_no}-type"
-  value        = each.value.api_type
-  key_vault_id = azurerm_key_vault.openai_kv.id
-  depends_on   = [azurerm_role_assignment.kv_role_assigment]
-}
-
 resource "azurerm_key_vault_secret" "openai_model_deployment_id" {
   for_each     = { for each in var.model_deployment : each.deployment_id => each }
-  name         = "${var.openai_account_name}-model-${each.value.deployment_no}-deployment-id"
+  name         = "${var.openai_account_name}-model-${each.value.deployment_id}-id"
   value        = each.value.deployment_id
   key_vault_id = azurerm_key_vault.openai_kv.id
   depends_on   = [azurerm_role_assignment.kv_role_assigment]
@@ -105,8 +97,8 @@ resource "azurerm_key_vault_secret" "openai_model_deployment_id" {
 
 resource "azurerm_key_vault_secret" "openai_model" {
   for_each     = { for each in var.model_deployment : each.deployment_id => each }
-  name         = "${var.openai_account_name}-model-${each.value.deployment_no}"
-  value        = each.value.model
+  name         = "${var.openai_account_name}-model-${each.value.deployment_id}-name"
+  value        = each.value.model_name
   key_vault_id = azurerm_key_vault.openai_kv.id
   depends_on   = [azurerm_role_assignment.kv_role_assigment]
 }

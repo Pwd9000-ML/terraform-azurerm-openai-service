@@ -122,10 +122,8 @@ variable "create_model_deployment" {
 
 variable "model_deployment" {
   type = list(object({
-    deployment_no   = number
     deployment_id   = string
-    api_type        = string
-    model           = string
+    model_name      = string
     model_format    = string
     model_version   = string
     scale_type      = string
@@ -138,12 +136,10 @@ variable "model_deployment" {
   default     = []
   description = <<-DESCRIPTION
       type = list(object({
-        deployment_no   = (Required) The unique number of each model deployment (Numbered when saved in Azure Key Vault).
         deployment_id   = (Required) The name of the Cognitive Services Account `Model Deployment`. Changing this forces a new resource to be created.
-        api_type        = (Required) The type of the Cognitive Services Account `Model Deployment`. Possible values are `azure`.
-        model = {
+        model_name = {
           model_format  = (Required) The format of the Cognitive Services Account Deployment model. Changing this forces a new resource to be created. Possible value is OpenAI.
-          model         = (Required) The name of the Cognitive Services Account Deployment model. Changing this forces a new resource to be created.
+          model_name    = (Required) The name of the Cognitive Services Account Deployment model. Changing this forces a new resource to be created.
           model_version = (Required) The version of Cognitive Services Account Deployment model.
         }
         scale = {
