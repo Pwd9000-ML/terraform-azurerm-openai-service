@@ -5,12 +5,10 @@
 
 version: 2
 updates:
-  - package-ecosystem: "terraform" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "terraform" 
+    directory: "/"
     schedule:
-      interval: "weekly"
-      day: "thursday"
-      time: "05:00"
+      interval: "monthly"
       timezone: "Europe/London"
 
   - package-ecosystem: "github-actions" # See documentation for possible values
