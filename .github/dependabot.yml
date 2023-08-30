@@ -8,7 +8,9 @@ updates:
   - package-ecosystem: "terraform" 
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+      day: "sunday"
+      time: "04:00"
       timezone: "Europe/London"
 
   - package-ecosystem: "github-actions" # See documentation for possible values
