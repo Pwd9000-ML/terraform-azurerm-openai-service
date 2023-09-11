@@ -27,7 +27,7 @@ Want to host your own **Private ChatGPT-like service on Azure?**
 
 Check out my other Terraform module to deploy your very own private ChatBot/ChatGPT-like container apps instance hosted on **Azure OpenAI** and fronted by Azure Font Door + WAF:  
 
-**[openai-private-chatgpt](openai-private-chatgpt)**  
+**[openai-private-chatgpt](https://registry.terraform.io/modules/Pwd9000-ML/openai-private-chatgpt/azurerm/latest)**  
 
 ![image.png](https://raw.githubusercontent.com/Pwd9000-ML/terraform-azurerm-openai-service/master/assets/chatbotui2.png)  
 
