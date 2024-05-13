@@ -17,4 +17,10 @@ resource "azurerm_cognitive_deployment" "model" {
     family   = each.value.scale_family
     capacity = each.value.scale_capacity
   }
+
+  lifecycle {
+    ignore_changes = [
+      cognitive_account_id
+    ]
+  }
 }
