@@ -38,13 +38,13 @@ model_deployment = [
     model_name    = "gpt-35-turbo-16k"
     model_format  = "OpenAI"
     model_version = "0613"
-    scale_type    = "Standard"
+    sku_name      = "Standard"
   },
   {
     deployment_id = "gpt35turbo"
     model_name    = "gpt-35-turbo"
     model_format  = "OpenAI"
     model_version = "0613"
-    scale_type    = "Standard"
+    sku_name      = "Standard"
   }
 ]
